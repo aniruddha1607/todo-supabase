@@ -39,10 +39,10 @@ export default function Auth() {
   }
 
   return (
-    <div className="row flex flex-center">
-      <div className="col-6 form-widget">
-        <h1 className="header">SignIn</h1>
-        <p className="description">Sign in to use our app</p>
+    <div className="row flex-col flex-center items-center">
+      <div className="col-6 form-widget flex flex-col items-center">
+        <h1 className="header py-3 font-bold text-[24px]">SignIn</h1>
+        <p className="description py-3">Sign in to use our app</p>
         <form className="form-widget" onSubmit={handleLogin}>
           <div>
             <input
@@ -55,7 +55,7 @@ export default function Auth() {
             />
             <input
               className="inputField"
-              type="text"
+              type="password"
               placeholder="Your password"
               value={password}
               required={true}
@@ -67,7 +67,7 @@ export default function Auth() {
               {loading ? <span>Loading</span> : <span>Sign Up</span>}
             </button>
             <button onClick={handleSignOut} > Sign out</button>
-            <button onClick={goToLogin}> Log in </button>
+            <button onClick={goToLogin}> Log in Instead</button>
           </div>
         </form>
         

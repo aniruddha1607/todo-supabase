@@ -29,7 +29,7 @@ const Home = () => {
         .from('smoothies')
         .select()
         .eq('user_id', user_id)
-        // .order(orderBy, {ascending: false})
+        .order(orderBy, {ascending: false})
       
       if (error) {
         setFetchError('Could not fetch the smoothies')
