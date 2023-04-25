@@ -40,14 +40,15 @@ const Login = () => {
   }
 
   return (
-    <div className="row flex-col flex-center items-center">
+    
+    <div className=" flex-col flex-center items-center h-screen bg-[#1e2124]">
       <div className="col-6 form-widget flex flex-col items-center">
-        <h1 className="header py-3 font-bold text-[24px]">Login </h1>
-        <p className="description py-3">login to use the application</p>
-        <form className="form-widget" onSubmit={handleLogin}>
-          <div>
+        <h1 className="header py-3 font-bold text-[24px] text-[#7289da]">Login </h1>
+        <p className="description py-3 pb-8 text-[#7289da]">login to use the application</p>
+        <form className="form-widget bg-[#424549] p-14" onSubmit={handleLogin}>
+          <div className='pb-5'>
             <input
-              className="inputField"
+              className="inputField rounded-md px-4 "
               type="email"
               placeholder="Your email"
               value={email}
@@ -55,7 +56,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
-              className="inputField"
+              className="inputField rounded-md px-4"
               type="password"
               placeholder="Your password"
               value={password}
@@ -64,14 +65,15 @@ const Login = () => {
             />
           </div>
           <div className='flex flex-col gap-y-4 items-center'>
-            <button className={'button block'} disabled={loading}>
+            <button className={'button block bg-[#7289da] text-[#1e2124]'} disabled={loading}>
               {loading ? <span>Loading</span> : <span>Login</span>}
             </button>
-            <button onClick={goToSignup}> Sign up Instead</button>
-          </div>
+            <button onClick={goToSignup} className='bg-[#7289da] text-[#1e2124]'> Sign up Instead</button>
+          </div> 
         </form>
       </div>
     </div>
+    
   )
 }
 

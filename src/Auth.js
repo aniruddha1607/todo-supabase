@@ -39,14 +39,14 @@ export default function Auth() {
   }
 
   return (
-    <div className="row flex-col flex-center items-center">
+    <div className="row flex flex-col flex-center items-center">
       <div className="col-6 form-widget flex flex-col items-center">
-        <h1 className="header py-3 font-bold text-[24px]">SignIn</h1>
-        <p className="description py-3">Sign in to use our app</p>
-        <form className="form-widget" onSubmit={handleLogin}>
-          <div>
+        <h1 className="header py-3 font-bold text-[24px] text-[#7289da]">SignIn</h1>
+        <p className="description py-3 pb-8 text-[#7289da]">Sign in to use our app</p>
+        <form className="form-widget bg-[#424549] p-14" onSubmit={handleLogin}>
+          <div className='pb-5'>
             <input
-              className="inputField"
+              className="inputField rounded-md px-4"
               type="email"
               placeholder="Your email"
               value={email}
@@ -54,7 +54,7 @@ export default function Auth() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
-              className="inputField"
+              className="inputField rounded-md px-4"
               type="password"
               placeholder="Your password"
               value={password}
@@ -63,11 +63,11 @@ export default function Auth() {
             />
           </div>
           <div className='flex flex-col gap-y-4 items-center'>
-            <button className={'button block'} disabled={loading}>
+            <button className={'button block bg-[#7289da] text-[#1e2124]'} disabled={loading}>
               {loading ? <span>Loading</span> : <span>Sign Up</span>}
             </button>
-            <button onClick={handleSignOut} > Sign out</button>
-            <button onClick={goToLogin}> Log in Instead</button>
+            <button onClick={handleSignOut} className='bg-[#7289da] text-[#1e2124] ' > Sign out</button>
+            <button onClick={goToLogin} className='bg-[#7289da] text-[#1e2124]'> Log in Instead</button>
           </div>
         </form>
         

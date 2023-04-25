@@ -62,14 +62,14 @@ const Home = () => {
   return (
     <div className="page home">
       {fetchError && (<p>{fetchError}
-        <button onClick={goToCreate} className='button mt-5 bg-teal-500 p-2 px-5 rounded-md'>Add Item</button></p>)}
+        <button onClick={goToCreate} className='button mt-5 bg-[#7289da] text-[#1e2124] p-2 px-5 rounded-md'>Add Item</button></p>)}
       {smoothies && (
         <div className="smoothies">
           <div className="order-by">
-            <p>Order by:</p>
-            <button onClick={() => setOrderBy('created_at')}>Time Created</button>
-            <button onClick={() => setOrderBy('title')}>Title</button>
-            <button onClick={() => setOrderBy('rating')}>Priority</button>
+            <p className='text-[#7289da] pb-4 font-semibold'>Order by:</p>
+            <button onClick={() => setOrderBy('created_at')} className='bg-[#7289da] text-[#1e2124]'>Time Created</button>
+            <button onClick={() => setOrderBy('title')} className='bg-[#7289da] text-[#1e2124]'>Title</button>
+            <button onClick={() => setOrderBy('rating')} className='bg-[#7289da] text-[#1e2124]'>Priority</button>
           </div>
           <div className="smoothie-grid">
             {smoothies.map(smoothie => (
@@ -77,8 +77,8 @@ const Home = () => {
             ))}
           </div>
           <div className='flex flex-col items-start'>
-          <button onClick={goToCreate} className='button mt-5 bg-teal-500 p-2 px-5 rounded-md'>Add Item</button>
-          <button onClick={handleSignOut} className='button mt-5 bg-teal-500 p-2 px-5 rounded-md'>Logout</button>
+          <button onClick={goToCreate} className='button mt-5 bg-[#7289da] text-[#1e2124] font-semibold p-2 px-5 rounded-md'>Add Item</button>
+          <button onClick={handleSignOut} className='button mt-5 bg-[#7289da] text-[#1e2124] font-semibold p-2 px-5 rounded-md'>Logout</button>
           </div>
         </div>
       )}

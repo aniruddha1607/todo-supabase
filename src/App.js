@@ -28,7 +28,8 @@ function App() {
   return (
     <AuthContextProvider>
     <Router>
-    <div className="container" style={{ padding: '50px 0 100px 0' }}>
+    <div className="container" style={{ padding: '50px 0 100px 0' }} >
+      {/* <h1 className='text-[#7289da] text-center text-[40px] font-extrabold pb-5 mb-5 border-b-2 border-spacing-3 border-[#7289da] flex flex-col items-center'> TO DO LIST </h1> */}
       <Routes>
       <Route path="/" element={<Auth />} />
       <Route path="/login" element={<Login />} />

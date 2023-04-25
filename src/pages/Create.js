@@ -55,33 +55,36 @@ const Create = () => {
 
   return (
     <div className="page create">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Todo:</label>
+      <form onSubmit={handleSubmit} className="bg-[#424549]">
+        <label htmlFor="title" className="text-[#7289da]">Todo:</label>
         <input 
           type="text" 
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          className="rounded-md bg-[#282b30] text-white"
         />
 
-        <label htmlFor="method">Work:</label>
+        <label htmlFor="method" className="text-[#7289da]">Work:</label>
         <textarea 
           id="method"
           value={method}
           onChange={(e) => setMethod(e.target.value)}
+          className="rounded-md bg-[#282b30] text-white"
         />
 
-        <label htmlFor="rating">Priority:</label>
+        <label htmlFor="rating" className="text-[#7289da]">Priority:</label>
         <input 
           type="number"
           id="rating"
           value={rating}
           onChange={(e) => setRating(e.target.value)}
+          className="rounded-md mb-10 bg-[#282b30] text-white"
         />
 
-        <button>Add todo item</button>
+        <button className="bg-[#7289da] text-[#1e2124]">Add todo item</button>
 
-        {formError && <p className="error">{formError}</p>}
+        {formError && <p className="error text-red-600 pt-4">{formError}</p>}
       </form>
     </div>
   )
